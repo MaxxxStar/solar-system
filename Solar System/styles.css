@@ -6,13 +6,13 @@
 .solar-system {
     width: 100vw;
     height: 100vh;
-    background-color: blue;
+    background-image: linear-gradient(rgb(44, 32, 122), rgb(0, 0, 68));
 }
 
 .orbit {
     position: absolute;
     border-radius: 50%;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 25%);
     z-index: 0;
 }
 
@@ -106,7 +106,7 @@
     width: 1vw;
     right: calc(50% - (1vw / 2));
     top: calc(50% - (1vw / 2));
-    animation: venus-translation 5s;
+    animation: venus-translation 10s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -117,7 +117,7 @@
     width: 1.2vw;
     right: calc(50% - (1.2vw / 2));
     top: calc(50% - (1.2vw / 2));
-    animation: earth-translation 5s;
+    animation: earth-translation 15s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -128,7 +128,7 @@
     width: 0.4vw;
     right: calc(50% - (0.4vw / 2));
     top: calc(50% - (0.4vw / 2));
-    animation: mars-translation 5s;
+    animation: mars-translation 20s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -139,7 +139,7 @@
     width: 4vw;
     right: calc(50% - (4vw / 2));
     top: calc(50% - (4vw / 2));
-    animation: jupiter-translation 5s;
+    animation: jupiter-translation 25s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -150,7 +150,7 @@
     width: 3.6vw;
     right: calc(50% - (3.6vw / 2));
     top: calc(50% - (3.6vw / 2));
-    animation: saturn-translation 5s;
+    animation: saturn-translation 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -172,7 +172,7 @@
     width: 1.8vw;
     right: calc(50% - (1.8vw / 2));
     top: calc(50% - (1.8vw / 2));
-    animation: uranus-translation 5s;
+    animation: uranus-translation 35s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -183,7 +183,7 @@
     width: 1.8vw;
     right: calc(50% - (1.8vw / 2));
     top: calc(50% - (1.8vw / 2));
-    animation: netune-translation 5s;
+    animation: netune-translation 40s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
