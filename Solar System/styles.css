@@ -1,0 +1,298 @@
+* {
+    box-sizing: border-box;
+    margin: 0 0 0 0;
+}
+
+.solar-system {
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+}
+
+.orbit {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid white;
+    z-index: 0;
+}
+
+#mercury-orbit {
+    width: 12vw;
+    height: 12vw;
+    right: calc(50% - (12vw / 2));
+    top: calc(50% - (12vw / 2));
+}
+
+#venus-orbit {
+    width: 14vw;
+    height: 14vw;
+    right: calc(50% - (14vw / 2));
+    top: calc(50% - (14vw / 2));
+}
+
+#earth-orbit {
+    width: 18vw;
+    height: 18vw;
+    right: calc(50% - (18vw / 2));
+    top: calc(50% - (18vw / 2));
+}
+
+#mars-orbit {
+    width: 22vw;
+    height: 22vw;
+    right: calc(50% - (22vw / 2));
+    top: calc(50% - (22vw / 2));
+}
+
+#jupiter-orbit {
+    width: 28vw;
+    height: 28vw;
+    right: calc(50% - (28vw / 2));
+    top: calc(50% - (28vw / 2));
+}
+
+#saturn-orbit {
+    width: 36vw;
+    height: 36vw;
+    right: calc(50% - (36vw / 2));
+    top: calc(50% - (36vw / 2));
+}
+
+#uranus-orbit {
+    width: 42vw;
+    height: 42vw;
+    right: calc(50% - (42vw / 2));
+    top: calc(50% - (42vw / 2));
+}
+
+#netune-orbit {
+    width: 46vw;
+    height: 46vw;
+    right: calc(50% - (46vw / 2));
+    top: calc(50% - (46vw / 2));
+}
+
+.astro {
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+    z-index: 1;
+}
+
+#sun {
+    filter: blur(2px);
+    background-image: radial-gradient(yellow, red);
+    height: 9vw;
+    width: 9vw;
+    right: calc(50% - (9vw / 2));
+    top: calc(50% - (9vw / 2));
+}
+
+
+#mercury {
+    background-image: radial-gradient(gray, darkgray);
+    height: 0.4vw;
+    width: 0.4vw;
+    right: calc(50% - (0.4vw / 2));
+    top: calc(50% - (0.4vw / 2));
+    animation: mercury-translation 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#venus {
+    background-image: radial-gradient(lightyellow, rgb(253, 253, 205));
+    height: 1vw;
+    width: 1vw;
+    right: calc(50% - (1vw / 2));
+    top: calc(50% - (1vw / 2));
+    animation: venus-translation 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#earth {
+    background-image: radial-gradient(lightskyblue, lightblue);
+    height: 1.2vw;
+    width: 1.2vw;
+    right: calc(50% - (1.2vw / 2));
+    top: calc(50% - (1.2vw / 2));
+    animation: earth-translation 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#mars {
+    background-image: radial-gradient(lightcoral, brown);
+    height: 0.4vw;
+    width: 0.4vw;
+    right: calc(50% - (0.4vw / 2));
+    top: calc(50% - (0.4vw / 2));
+    animation: mars-translation 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#jupiter {
+    background-image: radial-gradient(burlywood, lightcoral);
+    height: 4vw;
+    width: 4vw;
+    right: calc(50% - (4vw / 2));
+    top: calc(50% - (4vw / 2));
+    animation: jupiter-translation 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#saturn {
+    background-image: radial-gradient(burlywood, gray);
+    height: 3.6vw;
+    width: 3.6vw;
+    right: calc(50% - (3.6vw / 2));
+    top: calc(50% - (3.6vw / 2));
+    animation: saturn-translation 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#saturn-ring {
+    height: 3.6vw;
+    width: 3.6vw;
+    z-index: 2;
+    border: 4px solid white;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-radius: 50% 50% 0% 0%;
+    transform: rotateX(50deg) rotateY(50deg);
+}
+
+#uranus {
+    background-image: radial-gradient(cyan, lightblue);
+    height: 1.8vw;
+    width: 1.8vw;
+    right: calc(50% - (1.8vw / 2));
+    top: calc(50% - (1.8vw / 2));
+    animation: uranus-translation 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#netune {
+     background-image: radial-gradient(blue, darkslateblue);
+    height: 1.8vw;
+    width: 1.8vw;
+    right: calc(50% - (1.8vw / 2));
+    top: calc(50% - (1.8vw / 2));
+    animation: netune-translation 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes mercury-translation {
+    0% { 
+        transform: rotate(0deg)  
+              translateY(6vw) rotate(0deg); 
+    } 
+
+    100% { 
+        transform: rotate(360deg)  
+              translateY(6vw) rotate(-360deg); 
+    } 
+}
+
+@keyframes venus-translation {
+    0% { 
+        transform: rotate(0deg)  
+              translateY(7vw) rotate(0deg); 
+    } 
+
+    100% { 
+        transform: rotate(360deg)  
+              translateY(7vw) rotate(-360deg); 
+    } 
+}
+
+@keyframes earth-translation {
+    0% { 
+        transform: rotate(0deg)  
+              translateY(9vw) rotate(0deg); 
+    } 
+
+    100% { 
+        transform: rotate(360deg)  
+              translateY(9vw) rotate(-360deg); 
+    } 
+}
+
+@keyframes mars-translation {
+    0% { 
+        transform: rotate(0deg)  
+              translateY(11vw) rotate(0deg); 
+    } 
+
+    100% { 
+        transform: rotate(360deg)  
+              translateY(11vw) rotate(-360deg); 
+    } 
+}
+
+@keyframes jupiter-translation {
+    0% { 
+        transform: rotate(0deg)  
+              translateY(14vw) rotate(0deg); 
+    } 
+
+    100% { 
+        transform: rotate(360deg)  
+              translateY(14vw) rotate(-360deg); 
+    } 
+}
+
+
+@keyframes saturn-translation {
+    0% { 
+        transform: rotate(0deg)  
+              translateY(18vw) rotate(0deg); 
+    } 
+
+    100% { 
+        transform: rotate(360deg)  
+              translateY(18vw) rotate(-360deg); 
+    } 
+}
+
+@keyframes uranus-translation {
+    0% { 
+        transform: rotate(0deg)  
+              translateY(21vw) rotate(0deg); 
+    } 
+
+    100% { 
+        transform: rotate(360deg)  
+              translateY(21vw) rotate(-360deg); 
+    } 
+}
+
+@keyframes netune-translation {
+    0% { 
+        transform: rotate(0deg)  
+              translateY(23vw) rotate(0deg); 
+    } 
+
+    100% { 
+        transform: rotate(360deg)  
+              translateY(23vw) rotate(-360deg); 
+    } 
+}
+
+/* 
+mercury: 0.5
+venus: 0.9
+earth: 1.3
+mars: 2
+jupiter: 6
+saturn: 13
+uranus: 25
+netune: 40
+*/
